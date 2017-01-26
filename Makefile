@@ -79,9 +79,9 @@ $(NATIVE_DLL): $(ZSTD_UNPACKED) $(ZSTD_OUT)/$(LIBNAME)
 	@mkdir -p $(NATIVE_TARGET_DIR)
 	cp $(ZSTD_OUT)/$(LIBNAME) $(NATIVE_TARGET_DIR)/$(LIBNAME)
 
-package: $(TARGET)/$(snappy-jar-version).jar
+package: $(TARGET)/$(zstd-jar-version).jar
 
-$(TARGET)/$(snappy-jar-version).jar:
+$(TARGET)/$(zstd-jar-version).jar:
 	$(SBT) package
 
 test: $(NATIVE_DLL)
